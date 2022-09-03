@@ -174,6 +174,45 @@ public class LinkedList
 
 
 
+
+    public void bubble_sort()
+    {
+
+        //ilk elemaný overwrite ediyor, tekrar üzerinden geç.
+        // input {0,5,2,8,4,6,3,7,1}
+        // output {1,1,2,3,4,5,6,7,8}
+
+        Node tmp, tmp1, tmp2;
+
+
+        for (int i = length; i >= 0; i--)
+        {
+            tmp = head;
+            tmp1 = head;
+            tmp2 = tmp1.next;
+            for (int j = 0; j < i - 1; j++)
+            {
+                //Debug.Log("tmp1.value    " + tmp1.value);
+                //Debug.Log("tmp2.value    " + tmp2.value);
+                if (tmp1.value > tmp2.value)
+                {
+                    tmp.value = tmp1.value;
+                    tmp1.value = tmp2.value;
+                    tmp2.value = tmp.value;
+                }
+                tmp2 = tmp2.next;
+                tmp1 = tmp1.next;
+            }
+            }
+        }
+   
+
+
+    public void swap(Node node1, Node node2)
+    {
+
+    }
+
 }
 
 
