@@ -8,8 +8,8 @@ using UnityEngine;
 [System.Serializable]
 public class LinkedList
 {
-    private Node head;
-    private Node tail;
+    public Node head;
+    public Node tail;
     public int length;
 
     public LinkedList(int i) {
@@ -206,6 +206,10 @@ public class LinkedList
             }
         }
    
+
+
+
+    
 
 
     public void swap(Node node1, Node node2)
