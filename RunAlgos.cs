@@ -11,21 +11,22 @@ public class RunAlgos : MonoBehaviour
     public void Start()
     {
         list1 = new LinkedList(0);
+        list1.append(14);
         list1.append(2);
+        list1.append(22); 
         list1.append(4);
         list1.append(6);
         list1.append(15);
-        list1.append(22);
-
-        list2 = new LinkedList(1);
-        list2.append(3);
-        list2.append(5);
-        list2.append(7);
-        list2.append(9);
-        list2.append(11);
-        list2.append(14);
-        list2.append(24);
-        list2.append(26);
+        list1.append(3);
+        list1.append(24);
+        list1.append(5);
+        list1.append(26);
+        list1.append(7);
+        list1.append(9);
+        list1.append(11);
+        
+        
+        
 
         //list1.print_list();
         //list2.print_list();
@@ -59,7 +60,9 @@ public class RunAlgos : MonoBehaviour
         {
             //myLinkedList.bubble_sort();
             //myLinkedList.print_list();
-            merged = merge(list1, list2);
+            //merged = merge(list1, list2);
+            //merged.print_list();
+            merged = merge_sort(list1);
             merged.print_list();
         }
     }
@@ -135,6 +138,44 @@ public class RunAlgos : MonoBehaviour
         return newlist;
     }
 
+
+
+
+
+    public LinkedList merge_sort(LinkedList UnsortedList)
+
+        // LOL I cant believe that it worked.,
+        // Optimize this algorithm.
+        // Check edge cases.
+    {
+        if (UnsortedList.length == 1)
+        {
+            return UnsortedList;
+        }
+
+
+        LinkedList first_half = new LinkedList(UnsortedList.head.value);
+        Node tmp = UnsortedList.head.next;
+
+
+        for (int i = 0; i < Mathf.RoundToInt(UnsortedList.length/2)-1; i++)
+        {
+            first_half.append(tmp.value);
+            tmp = tmp.next;
+        }
+
+        LinkedList second_half = new LinkedList(tmp.value);
+        tmp = tmp.next;
+        while (tmp != null)
+        {
+            second_half.append(tmp.value);
+            tmp = tmp.next;
+            
+        }
+        
+
+        return merge(merge_sort(first_half), merge_sort(second_half));
+    }
 
 
 }
