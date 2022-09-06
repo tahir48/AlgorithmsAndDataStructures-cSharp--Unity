@@ -7,26 +7,34 @@ public class RunAlgos : MonoBehaviour
 
     public LinkedList myLinkedList;
     public LinkedList list1, list2, merged;
-
+    public Stack stack1;
     public void Start()
     {
-        list1 = new LinkedList(0);
-        list1.append(14);
-        list1.append(2);
-        list1.append(22); 
-        list1.append(4);
-        list1.append(6);
-        list1.append(15);
-        list1.append(3);
-        list1.append(24);
-        list1.append(5);
-        list1.append(26);
-        list1.append(7);
-        list1.append(9);
-        list1.append(11);
-        
-        
-        
+        stack1 = new Stack(4);
+        stack1.push(3);
+        stack1.push(2);
+        stack1.push(1);
+        stack1.push(0);
+
+
+
+        //list1 = new LinkedList(0);
+        //list1.append(14);
+        //list1.append(2);
+        //list1.append(22); 
+        //list1.append(4);
+        //list1.append(6);
+        //list1.append(15);
+        //list1.append(3);
+        //list1.append(24);
+        //list1.append(5);
+        //list1.append(26);
+        //list1.append(7);
+        //list1.append(9);
+        //list1.append(11);
+
+
+
 
         //list1.print_list();
         //list2.print_list();
@@ -65,14 +73,21 @@ public class RunAlgos : MonoBehaviour
             merged = merge_sort(list1);
             merged.print_list();
         }
+
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            stack1.pop();
+            stack1.print_stack();
+        }
+
+
     }
 
 
 
     public LinkedList merge(LinkedList sortedList1, LinkedList sortedList2)
     {
-
-        //Edge cases are tested, method works well.
 
         LinkedList newlist;
 
@@ -144,9 +159,6 @@ public class RunAlgos : MonoBehaviour
 
     public LinkedList merge_sort(LinkedList UnsortedList)
 
-        // LOL I cant believe that it worked.,
-        // Optimize this algorithm.
-        // Check edge cases.
     {
         if (UnsortedList.length == 1)
         {
