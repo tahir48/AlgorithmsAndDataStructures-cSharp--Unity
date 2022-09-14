@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 using System;
+=======
+>>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +14,19 @@ public class RunAlgos : MonoBehaviour
     public Stack stack1;
     public void Start()
     {
+<<<<<<< HEAD
         // stack1 = new Stack(4);
         // stack1.push(3);
         // stack1.push(2);
         // stack1.push(1);
         // stack1.push(0);
+=======
+        stack1 = new Stack(4);
+        stack1.push(3);
+        stack1.push(2);
+        stack1.push(1);
+        stack1.push(0);
+>>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
 
 
 
@@ -40,6 +51,7 @@ public class RunAlgos : MonoBehaviour
         //list1.print_list();
         //list2.print_list();
 
+<<<<<<< HEAD
         myLinkedList = new LinkedList(0);
         myLinkedList.append(5);
         myLinkedList.append(2);
@@ -47,6 +59,16 @@ public class RunAlgos : MonoBehaviour
         myLinkedList.append(4);
         myLinkedList.append(10);
         myLinkedList.append(11);
+=======
+        //myLinkedList = new LinkedList(0);
+        //myLinkedList.append(5);
+        //myLinkedList.append(2);
+        //myLinkedList.append(8);
+        //myLinkedList.append(4);
+
+        //myLinkedList.append(10);
+        //myLinkedList.append(11);
+>>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
         //myLinkedList.set_value(5, 500);
         //myLinkedList.remove(6);
         //myLinkedList.pop_first();
@@ -67,16 +89,25 @@ public class RunAlgos : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //myLinkedList.bubble_sort();
+<<<<<<< HEAD
             myLinkedList.print_list();
             //merged = merge(list1, list2);
             //merged.print_list();
             // merged = merge_sort(list1);
             // merged.print_list();
+=======
+            //myLinkedList.print_list();
+            //merged = merge(list1, list2);
+            //merged.print_list();
+            merged = merge_sort(list1);
+            merged.print_list();
+>>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
         }
 
 
         if (Input.GetMouseButtonDown(1))
         {
+<<<<<<< HEAD
             //List<int> newList = AddToList(myLinkedList);
             // List<int> newList = LinkedListToListWRecursion(myLinkedList);             
             // foreach(var i in newList){
@@ -90,6 +121,10 @@ public class RunAlgos : MonoBehaviour
             Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 8));
             Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 11));
             Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 22));
+=======
+            stack1.pop();
+            stack1.print_stack();
+>>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
         }
 
 
@@ -201,6 +236,7 @@ public class RunAlgos : MonoBehaviour
     }
 
 
+<<<<<<< HEAD
 
 
 
@@ -299,5 +335,7 @@ public class RunAlgos : MonoBehaviour
 
 
 
+=======
+>>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
 }
 
