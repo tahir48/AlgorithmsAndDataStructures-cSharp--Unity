@@ -10,7 +10,7 @@ public class RunAlgos : MonoBehaviour
     public LinkedList list1, list2, merged;
     public Stack stack1;
     public CircularLinkedList circularLinkedList;
-
+    public CircularDoublyLinkedList CircularDoublyLinkedList;
 
     public void Start()
     {
@@ -24,11 +24,19 @@ public class RunAlgos : MonoBehaviour
         //stack1.push(2);
         //stack1.push(1);
         //stack1.push(0);
-        circularLinkedList = new CircularLinkedList(1);
-        circularLinkedList.AppendFromHead(2);
-        circularLinkedList.AppendFromHead(3);
-        circularLinkedList.AppendFromHead(4);
-        circularLinkedList.AppendFromHead(5);
+        //circularLinkedList = new CircularLinkedList(1);
+        //circularLinkedList.AppendFromHead(2);
+        //circularLinkedList.AppendFromHead(3);
+        //circularLinkedList.AppendFromHead(4);
+        //circularLinkedList.AppendFromHead(5);
+
+
+        CircularDoublyLinkedList = new CircularDoublyLinkedList(0);
+        CircularDoublyLinkedList.AppendFromHead(1);
+        CircularDoublyLinkedList.AppendFromHead(2);
+        CircularDoublyLinkedList.AppendFromHead(3);
+        CircularDoublyLinkedList.AppendFromHead(4);
+       
 
         //list1 = new LinkedList(0);
         //list1.append(14);
@@ -98,16 +106,35 @@ public class RunAlgos : MonoBehaviour
             //merged.print_list();
             //merged = merge_sort(list1);
             //merged.print_list();
-            Debug.Log("Circular Linked List  " + circularLinkedList.head.value);
-            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.value);
-            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.value);
-            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.value);
-            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.value);
-            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.value);
-            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.next.value);
-            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.next.next.value);
-            Debug.Log("All List with print method  ");
-            circularLinkedList.print_list();
+            //Debug.Log("Circular Linked List  " + circularLinkedList.head.value);
+            //Debug.Log("Circular Linked List  " + circularLinkedList.head.next.value);
+            //Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.value);
+            //Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.value);
+            //Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.value);
+            //Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.value);
+            //Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.next.value);
+            //Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.next.next.value);
+            //Debug.Log("All List with print method  ");
+            //circularLinkedList.print_list();
+
+
+            Debug.Log(CircularDoublyLinkedList.head.value);
+            Debug.Log(CircularDoublyLinkedList.head.next.value);
+            Debug.Log(CircularDoublyLinkedList.head.next.next.value);
+            Debug.Log(CircularDoublyLinkedList.head.next.next.next.value);
+            Debug.Log(CircularDoublyLinkedList.head.next.next.next.next.value);
+            Debug.Log(CircularDoublyLinkedList.head.next.next.next.next.next.value);
+            Debug.Log("********");
+            Debug.Log(CircularDoublyLinkedList.tail.value);
+            Debug.Log(CircularDoublyLinkedList.tail.prev.value);
+            Debug.Log(CircularDoublyLinkedList.tail.prev.prev.value);
+            Debug.Log(CircularDoublyLinkedList.tail.prev.prev.prev.value);
+            Debug.Log(CircularDoublyLinkedList.tail.prev.prev.prev.prev.value);
+            Debug.Log(CircularDoublyLinkedList.tail.prev.prev.prev.prev.prev.value);
+
+
+
+
 
         }
 
