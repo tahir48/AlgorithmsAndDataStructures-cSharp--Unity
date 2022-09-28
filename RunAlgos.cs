@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 using System;
-=======
->>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,23 +9,26 @@ public class RunAlgos : MonoBehaviour
     public LinkedList myLinkedList;
     public LinkedList list1, list2, merged;
     public Stack stack1;
+    public CircularLinkedList circularLinkedList;
+
+
     public void Start()
     {
-<<<<<<< HEAD
         // stack1 = new Stack(4);
         // stack1.push(3);
         // stack1.push(2);
         // stack1.push(1);
         // stack1.push(0);
-=======
-        stack1 = new Stack(4);
-        stack1.push(3);
-        stack1.push(2);
-        stack1.push(1);
-        stack1.push(0);
->>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
-
-
+        //stack1 = new Stack(4);
+        //stack1.push(3);
+        //stack1.push(2);
+        //stack1.push(1);
+        //stack1.push(0);
+        circularLinkedList = new CircularLinkedList(1);
+        circularLinkedList.AppendFromHead(2);
+        circularLinkedList.AppendFromHead(3);
+        circularLinkedList.AppendFromHead(4);
+        circularLinkedList.AppendFromHead(5);
 
         //list1 = new LinkedList(0);
         //list1.append(14);
@@ -51,15 +51,14 @@ public class RunAlgos : MonoBehaviour
         //list1.print_list();
         //list2.print_list();
 
-<<<<<<< HEAD
-        myLinkedList = new LinkedList(0);
-        myLinkedList.append(5);
-        myLinkedList.append(2);
-        myLinkedList.append(8);
-        myLinkedList.append(4);
-        myLinkedList.append(10);
-        myLinkedList.append(11);
-=======
+        //myLinkedList = new LinkedList(0);
+        //myLinkedList.append(5);
+        //myLinkedList.append(2);
+        //myLinkedList.append(8);
+        //myLinkedList.append(4);
+        //myLinkedList.append(10);
+        //myLinkedList.append(11);
+
         //myLinkedList = new LinkedList(0);
         //myLinkedList.append(5);
         //myLinkedList.append(2);
@@ -68,7 +67,6 @@ public class RunAlgos : MonoBehaviour
 
         //myLinkedList.append(10);
         //myLinkedList.append(11);
->>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
         //myLinkedList.set_value(5, 500);
         //myLinkedList.remove(6);
         //myLinkedList.pop_first();
@@ -89,25 +87,35 @@ public class RunAlgos : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //myLinkedList.bubble_sort();
-<<<<<<< HEAD
-            myLinkedList.print_list();
+            //myLinkedList.print_list();
             //merged = merge(list1, list2);
             //merged.print_list();
             // merged = merge_sort(list1);
             // merged.print_list();
-=======
+
             //myLinkedList.print_list();
             //merged = merge(list1, list2);
             //merged.print_list();
-            merged = merge_sort(list1);
-            merged.print_list();
->>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
+            //merged = merge_sort(list1);
+            //merged.print_list();
+            Debug.Log("Circular Linked List  " + circularLinkedList.head.value);
+            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.value);
+            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.value);
+            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.value);
+            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.value);
+            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.value);
+            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.next.value);
+            Debug.Log("Circular Linked List  " + circularLinkedList.head.next.next.next.next.next.next.next.value);
+            Debug.Log("All List with print method  ");
+            circularLinkedList.print_list();
+
         }
 
 
         if (Input.GetMouseButtonDown(1))
         {
-<<<<<<< HEAD
+            reverseWRecursion(myLinkedList);
+            //myLinkedList.reverse();
             //List<int> newList = AddToList(myLinkedList);
             // List<int> newList = LinkedListToListWRecursion(myLinkedList);             
             // foreach(var i in newList){
@@ -117,14 +125,12 @@ public class RunAlgos : MonoBehaviour
             // stack1.print_stack();   
             //Debug.Log("sum of the values in Linked List      " + LinkedListSum(myLinkedList));
             //Debug.Log("sum of the values in Linked List      " + LinkedListSumWRecursion(myLinkedList));
-            Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 10));
-            Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 8));
-            Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 11));
-            Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 22));
-=======
-            stack1.pop();
-            stack1.print_stack();
->>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
+            //Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 10));
+            //Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 8));
+            //Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 11));
+            //Debug.Log("is the value exists in the list?   " + LinkedListFindWRecursion(myLinkedList, 22));
+            //stack1.pop();
+            //stack1.print_stack();
         }
 
 
@@ -236,7 +242,6 @@ public class RunAlgos : MonoBehaviour
     }
 
 
-<<<<<<< HEAD
 
 
 
@@ -331,11 +336,25 @@ public class RunAlgos : MonoBehaviour
     }
 
 
+    public LinkedList reverseWRecursion(LinkedList list)
+    {
+        Node before = null;
+        Node tmp = list.head;
+        reverseWRecursion_helper(tmp, before);
+        return list;
+    }
+    public Node reverseWRecursion_helper(Node node_tmp, Node node_before)
+    {
+        if (node_tmp == null)
+            return node_before;
+        Node after = node_tmp.next;
+        return reverseWRecursion_helper(after, node_tmp);
+    }
 
 
 
 
-=======
->>>>>>> 946f4045a6d4837fefbe0c25f85ca8b0d2747f18
+
+
 }
 

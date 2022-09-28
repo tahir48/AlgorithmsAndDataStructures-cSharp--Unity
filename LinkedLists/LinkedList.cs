@@ -212,8 +212,21 @@ public class LinkedList
     
 
 
-    public void swap(Node node1, Node node2)
+    public void reverse()
     {
+        if (head == null)
+            return;
+        Node before = null;
+        Node tmp = head;
+        while (tmp != null)
+        {
+            Node after = tmp.next;
+            tmp.next = before;
+            before = tmp;
+            tmp = after;
+        }
+        tail = head;
+        head = before;
 
     }
 
